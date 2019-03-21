@@ -1,0 +1,14 @@
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\bin\Debug\Proyecto3.exe.config
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\bin\Debug\Proyecto3.exe
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\bin\Debug\Proyecto3.pdb
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\bin\Debug\System.Data.SQLite.dll
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\bin\Debug\System.Data.SQLite.xml
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.csprojAssemblyReference.cache
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.Form1.resources
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.Properties.Resources.resources
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.csproj.GenerateResource.cache
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.csproj.CoreCompileInputs.cache
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.csproj.CopyComplete
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.exe
+C:\Users\josel_0v10him\source\repos\Proyecto3\Proyecto3\obj\Debug\Proyecto3.pdb
