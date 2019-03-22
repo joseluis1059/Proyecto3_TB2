@@ -44,14 +44,28 @@ namespace Proyecto3
             }
         }
 
+        [SQLiteFunction(Name = "Trim", Arguments = 2, FuncType = FunctionType.Scalar)]
+        class trim : SQLiteFunction
+        {
+            public override object Invoke(object[] args)
+            {
+                char string2 = Convert.ToChar(args[1].ToString());
+                string string1 = args[0].ToString();
+                string result = string1.Trim(string2);
+                return result;
+            }
+
+
+        }
+
         [SQLiteFunction(Name = "PMT", Arguments = 3, FuncType = FunctionType.Scalar)]
         class pmt : SQLiteFunction
         {
-            public static double PMT(double yearlyInterestRate, int totalNumberOfMonths, double loanAmount)
+            public override object Invoke(object[] args)
             {
-                var rate = (double)yearlyInterestRate / 100 / 12;
-                var denominator = Math.Pow((1 + rate), totalNumberOfMonths) - 1;
-                return (rate + (rate / denominator)) * loanAmount;
+                var rate = Convert.ToDouble(args[0].ToString())/ 100 / 12;
+                var denominator = Math.Pow((1 + rate), Convert.ToInt32(args[1].ToString())) - 1;
+                return (rate + (rate / denominator)) * Convert.ToInt32(args[2].ToString());
             }
 
         }
@@ -115,10 +129,43 @@ namespace Proyecto3
         {
             public override object Invoke(object[] args)
             {
-                string binarystring = String.Join(String.Empty,
-                    args.ToString().Select( c => Convert.ToString(Convert.ToInt32(args.ToString(), 16), 2).PadLeft(4, '0')));
+                String valBinario = Convert.ToString(Convert.ToInt32(args[0].ToString(), 16), 2);
 
-                return binarystring;
+                return valBinario;
+            }
+        }
+
+        [SQLiteFunction(Name = "CompareString", Arguments = 2, FuncType = FunctionType.Scalar)]
+        class CompareString : SQLiteFunction
+        {
+            public override object Invoke(object[] args)
+            {
+                int resultado = 0;
+                if (args[0].ToString().Length == args[1].ToString().Length)
+                    return 0;
+                if (args[0].ToString().Length < args[1].ToString().Length)
+                    return -1;
+                if (args[0].ToString().Length > args[1].ToString().Length)
+                    return 1;
+                return resultado;
+            }
+        }
+        [SQLiteFunction(Name = "Repeat", Arguments = 2, FuncType = FunctionType.Scalar)]
+        class Repeat : SQLiteFunction
+        {
+            public override object Invoke(object[] args)
+            {
+                String val=args[0].ToString(),result="";
+                int numero;
+
+                numero = Convert.ToInt32(args[1].ToString());
+
+                for (int i = 1; i <= numero; i++)
+                {
+                    result+=" "+val;
+                }
+
+                return result;
             }
         }
 
